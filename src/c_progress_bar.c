@@ -21,6 +21,7 @@ typedef struct
     const char *reset;
     const char *erase_current_line;
     const char *disable_cursor;
+    const char *enable_cursor;
 
     const char *bar_prefix;
     const char *bar_suffix;
@@ -252,6 +253,7 @@ static UTF8Codes get_utf8_codes(const CPB_ProgressBar *restrict progress_bar)
             .reset = "\033[0m",
             .erase_current_line = "\033[2K",
             .disable_cursor = "\033[?25l",
+            .enable_cursor = "\033[?25h",
 
             .bar_prefix = "",
             .bar_suffix = "",
@@ -417,7 +419,8 @@ static void print_progress_bar(const CPB_ProgressBar *restrict progress_bar)
     // Reset cursor
     if (progress_bar->is_finished)
     {
-        fputs("\033[?25h\n", stdout);
+        fputs(utf8_codes.enable_cursor, stdout);
+        fputs("\n", stdout);
     }
 
     fflush(stdout);
