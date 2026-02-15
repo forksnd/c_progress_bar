@@ -294,6 +294,7 @@ static UTF8Codes get_utf8_codes(const CPB_ProgressBar *restrict progress_bar)
             .reset = "",
             .erase_current_line = "",
             .disable_cursor = "",
+            .enable_cursor = "",
 
             .bar_prefix = "[",
             .bar_suffix = "]",
