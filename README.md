@@ -3,7 +3,7 @@ A simple progress bar library for C.
 ![Example Image (C Progress Bar)](.github/images/example.png)
 
 ## Features
-* Beautiful progress bar
+* Colorful progress bar
 * Remaining time estimation
 * Elapsed time tracking
 * Works with MSVC, Clang and GCC
@@ -11,7 +11,9 @@ A simple progress bar library for C.
 
 ## Limitations
 * The progress bar only prints when you call update
-* If you print anything when the progress bar is running, it may be overwritten by the progress bar or appended to the end
+* If you print anything when the progress bar is running, it may be
+    - overwritten by the progress bar if there is no `\n`
+    - appended to the end if there is `\n`
 ![Example Image (C Progress Bar)](.github/images/example2.png)
 
 ## Sample Usage
