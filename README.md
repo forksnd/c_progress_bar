@@ -15,6 +15,7 @@ A simple progress bar library for C.
     - overwritten by the progress bar if there is no `\n`
     - appended to the end if there is `\n`
 ![Example Image (C Progress Bar)](.github/images/example2.png)
+* On Windows, only the simple `no-color` version will be displayed. However, it is possible to fix by using wide characters (Help needed)
 
 ## Sample Usage
 ```c
